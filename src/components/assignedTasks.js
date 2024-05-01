@@ -16,7 +16,7 @@ function Assigned() {
           `${process.env.REACT_APP_IP_ADDRESS}/task/assignedTasks`
         );
         console.log(res, "assigned tasks ")
-        setAssignedTask(res.data)
+        setAssignedTask(res.data.reverse())
       } catch (error) {
         console.log("Error fetching tasks:", error);
         
