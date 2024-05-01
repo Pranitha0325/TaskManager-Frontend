@@ -39,7 +39,7 @@ function List() {
         const res = await axios.get(
           `${process.env.REACT_APP_IP_ADDRESS}/task/allTasks`
         );
-        setTasks(res.data); 
+        setTasks(res.data.reverse()); 
       } catch (error) {
         console.log("Error fetching tasks:", error);
         
