@@ -6,8 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
  import AssignedTasks from './components/assignedTasks'
  import Summery from './components/summery'
 
-
-
 import './App.css';
 
 function App() {
