@@ -2,6 +2,7 @@ import {React, useEffect, useState} from 'react';
 import { Pie } from 'react-chartjs-2';
 import axios from 'axios'
 import Sidebar from './sidebar.js'
+import { Chart } from 'chart.js/auto';
 
 const Summery = () => {
     const [newTasks, setNewTasks] = useState([])
