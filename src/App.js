@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+//  import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+ import TaskCreation from './components/taskCreation'
+ import Login from './components/login'
+ import ListOfTasks from './components/listOfTasks'
+ import AssignedTasks from './components/assignedTasks'
+ import Summery from './components/summery'
+
+
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/" element={<TaskCreation />} />
+        <Route path="/list" element={<ListOfTasks />} />
+        <Route path="/assigned" element={<AssignedTasks />} />
+        <Route path="/summery" element={<Summery />} />
+
+      </Routes>
+    </Router>
+    
+   
+   
+   
   );
 }
 
